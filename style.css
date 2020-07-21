@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Sans-Serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    border: 3px solid yellow;
+    background-color: rgba(255,255,255,.8);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    display: inline-block;
+    padding: 1rem;
+}
+
+section {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 100vh;
+    border: 3px solid red;
+    place-items: center;
+    font-size: 1.2rem;
+}
+
+#hero {
+    min-height: calc(100vh - 86px);
+    place-items: center;
+    background: url(https://images.unsplash.com/photo-1506038634487-60a69ae4b7b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1002&q=80);
+    background-size: cover;
+    color: white;
+}
+
+.row {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section .col {
+    flex: 0 1 360px;
+    margin: 5px;
+}
+
+.col.col-full {
+    flex: 0 1 100%;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) {
+    .col.col-full {
+        flex: 0 1 50%;
+    }
+}
+
+img {
+    object-fit: scale-down;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row;
+    }
+}
+
+footer .footer-list {
+    border: 3px solid green;
+    flex: 1 1 auto;
+}
+
+.bg-black {
+    background-color: black;
+    color: white;
+}
+
+.row-callout {
+    display: flex;
+}
+
+.row-callout .col {
+    text-align: initial;
+    flex: 1 1 40%;
+    max-width: 40%;
+    font-size: 1rem;
+    padding: 5%;
+}
+
+.callout-icon {
+    width: 52px;
+    height: 52px;
+    background-size: 52px 52px;
+    background-repeat: no-repeat;
+    background-image: url("https://www.apple.com/v/iphone-se/b/images/overview/icon_haptic_touch__d8puyvsg8m4i_large_2x.jpg");
+    padding: 0;
+    margin: 0;
+}
